@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 
-const NewsletterSidebar: React.FC = () => {
+const NewsletterSidebar = () => {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
+  const [status, setStatus] = useState('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!email) return;
     setStatus('loading');
