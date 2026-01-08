@@ -1,12 +1,6 @@
-
 import React from 'react';
-import { Post } from '../types';
 
-interface PostListProps {
-  posts: Post[];
-}
-
-const PostList: React.FC<PostListProps> = ({ posts }) => {
+const PostList = ({ posts }) => {
   return (
     <div className="post-list space-y-12">
       {posts.map((post) => (
