@@ -1,14 +1,7 @@
-
 import React from 'react';
-import { Category } from '../types';
 
-interface BlogHeaderProps {
-  activeCategory: Category;
-  onCategoryChange: (category: Category) => void;
-}
-
-const BlogHeader: React.FC<BlogHeaderProps> = ({ activeCategory, onCategoryChange }) => {
-  const categories: Category[] = ['All', 'Tech', 'Life', 'Travel'];
+const BlogHeader = ({ activeCategory, onCategoryChange }) => {
+  const categories = ['All', 'Tech', 'Life', 'Travel'];
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-zinc-100">
