@@ -1,7 +1,4 @@
-
-import { Post } from './types';
-
-export const BLOG_POSTS: Post[] = [
+export const BLOG_POSTS = [
   {
     id: '1',
     title: 'The Future of Minimalism in Modern Digital Interfaces',
