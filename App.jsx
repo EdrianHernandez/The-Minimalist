@@ -1,14 +1,12 @@
-
 import React, { useState, useMemo } from 'react';
 import BlogHeader from './components/BlogHeader';
 import FeaturedPost from './components/FeaturedPost';
 import PostList from './components/PostList';
 import NewsletterSidebar from './components/NewsletterSidebar';
 import { BLOG_POSTS } from './constants';
-import { Category } from './types';
 
-const App: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<Category>('All');
+const App = () => {
+  const [activeCategory, setActiveCategory] = useState('All');
 
   const filteredPosts = useMemo(() => {
     return activeCategory === 'All' 
@@ -17,7 +15,6 @@ const App: React.FC = () => {
   }, [activeCategory]);
 
   const featuredPost = useMemo(() => {
-    // If we're filtering, just show the first item as "hero" if any exists
     return activeCategory === 'All' 
       ? BLOG_POSTS.find(p => p.featured) || BLOG_POSTS[0]
       : filteredPosts[0];
