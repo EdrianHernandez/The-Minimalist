@@ -1,12 +1,6 @@
-
 import React from 'react';
-import { Post } from '../types';
 
-interface FeaturedPostProps {
-  post: Post;
-}
-
-const FeaturedPost: React.FC<FeaturedPostProps> = ({ post }) => {
+const FeaturedPost = ({ post }) => {
   return (
     <section className="featured-post relative group cursor-pointer overflow-hidden rounded-2xl mb-16 bg-zinc-50">
       <div className="grid md:grid-cols-12 items-center">
